@@ -42,6 +42,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//do I need to pull the product model into this function and if so, where?
 // create a new category
 router.post("/", async (req, res) => {
   try {
