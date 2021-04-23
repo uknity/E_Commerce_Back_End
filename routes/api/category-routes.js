@@ -5,8 +5,7 @@ const {
 } = require("../../models");
 
 // The `/api/categories` endpoint
-// find all categories
-// be sure to include its associated Products
+// find all categories, including associated products
 router.get("/", async (req, res) => {
   try {
     const categoryData = await Category.findAll({
@@ -20,9 +19,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//get a single category by id
-// find one category by its `id` value
-// be sure to include its associated Products
+//get a single category by id & include associated products
 router.get("/:id", async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
@@ -42,7 +39,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//do I need to pull the product model into this function and if so, where?
+
 // create a new category
 router.post("/", async (req, res) => {
   try {
