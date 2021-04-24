@@ -9,6 +9,7 @@ Tag.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      onDelete: 'CASCADE',
       primaryKey: true,
       autoIncrement: true,
     },

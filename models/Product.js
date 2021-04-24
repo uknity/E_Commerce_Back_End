@@ -12,6 +12,7 @@ Product.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      onDelete: 'CASCADE',
       primaryKey: true,
       autoIncrement: true,
     },
@@ -40,6 +41,7 @@ Product.init(
       references: {
         model: 'category',
         key: 'id',
+        unique: false
       },
     },
 
