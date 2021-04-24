@@ -85,7 +85,7 @@ router.put('/:id', (req, res) => {
       return ProductTag.findAll({
         where: {
           product_id: req.params.id
-        }
+        },
       });
     })
     .then((productTags) => {
