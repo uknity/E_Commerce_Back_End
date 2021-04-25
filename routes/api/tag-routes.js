@@ -44,7 +44,6 @@ router.post('/', async (req, res) => {
 });
 
 // update a tag's name by its `id` value
-
 router.put("/:id", async (req, res) => {
   try {
     const tagData = await Tag.update(req.body, {
@@ -64,35 +63,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// router.put('/:id', (req, res) => {
-//       Tag.update(req.body, {
-//       where: {
-//         id: req.params.id,
-//       },
-//     })
-//     .then((tag) => {
-//       return tag.findAll({
-//         where: {
-//           tag_id: req.params.id
-//         },
-//       });
-//     })
-//     .then((tagIds) => {
-     
-//       const tags = tagIds.map(({ product_id }) => product_id);
-     
-//       const new = req.body.
-    
-//     if (!tagData[0]) {
-//       res.status(404).json({ message: 'No tag with this id!' });
-//       return;
-//     }
-//     res.status(200).json(tagData);
-//    catch (err) {
-//     res.status(500).json(err);
-//   }
 
-// });
 
 // delete on tag by its `id` value
 router.delete('/:id', async (req, res) => {
